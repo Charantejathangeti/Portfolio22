@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background: #fdfdfd;
+  color: #2c3e50;
+}
+
+.sidebar {
+  width: 260px;
+  background-color: #154360;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar .profile-pic img {
+  border-radius: 50%;
+  border: 3px solid #2980b9;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.sidebar h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.sidebar p {
+  margin: 0 0 30px;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #a9cce3;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px 15px;
+  color: #d6eaf8;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background-color: #2980b9;
+  color: white;
+}
+
+main {
+  margin-left: 260px;
+  padding: 40px 40px 60px;
+  max-width: 900px;
+  width: 100%;
+}
+
+main section {
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #154360;
+  border-bottom: 3px solid #2980b9;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  color: #2980b9;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+article {
+  margin-bottom: 25px;
+}
+
+article span {
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+p a {
+  color: #2980b9;
+  text-decoration: none;
+}
+p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 10px;
+  }
+  .sidebar .profile-pic img {
+    width: 80px;
+    height: 80px;
+    margin: 0 15px 0 0;
+  }
+  .sidebar h2, .sidebar p, .sidebar nav a {
+    font-size: 1rem;
+    margin: 0 15px 0 0;
+  }
+  main {
+    margin-left: 0;
+    padding: 20px 15px;
+  }
+}
